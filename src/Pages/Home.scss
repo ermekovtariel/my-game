@@ -1,0 +1,82 @@
+@import '../styles/color.scss';
+
+.home_box {
+  display: grid;
+  grid-template-columns: 120px auto;
+  .score {
+    background: $score-backgroun;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      color: $color-white-text;
+      border-bottom: 1px solid $color-white-text;
+    }
+    h4 {
+      color: $color-white-text;
+      border-bottom: 12px solid $color-white-text;
+      padding-bottom: 1em;
+    }
+    span {
+      margin: 0.2rem;
+    }
+  }
+  .home_container {
+    height: 100vh;
+    display: grid;
+    .table {
+      display: grid;
+      place-content: center;
+      .row:first-child {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+      .row:last-child {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+      .row {
+        display: flex;
+        background: $game-table-background;
+        .category_value {
+          display: grid;
+          padding: 1rem;
+          margin: 14px 0.5rem;
+          width: 100px;
+          border-bottom: 1px solid;
+        }
+        .red {
+          background: $error-answer;
+          color: $color-white-text;
+          cursor: default !important;
+        }
+        .yellow {
+          cursor: default !important;
+          background: $success-answer;
+        }
+
+        .center:hover {
+          border-color: $color-white-text;
+        }
+        .center {
+          cursor: pointer;
+          justify-items: center;
+        }
+      }
+    }
+    .box {
+      display: grid;
+      grid-template-columns: auto auto;
+      a {
+        height: 100%;
+        button {
+          display: grid;
+          height: 100%;
+          text-align: center;
+          width: 100%;
+          font-size: 36px;
+          align-content: center;
+        }
+      }
+    }
+  }
+}

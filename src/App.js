@@ -1,23 +1,39 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+import { useRoutes } from './router';
+
 import './App.css';
 
 function App() {
+  const name = localStorage.getItem('user');
+  const [historyData, setHistoryData] = useState();
+  const [ads, setAds] = useState([]);
+  const [start, setStart] = useState('Start');
+
+  const [changeHandleer, setChangeHandleer] = useState({
+    true: 0,
+    false: 0,
+    count: 0,
+    change: false,
+    name,
+  });
+
+  const routes = useRoutes({
+    name,
+    changeHandleer,
+    setChangeHandleer,
+    historyData,
+    setHistoryData,
+    ads,
+    setAds,
+    start,
+    setStart,
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Router>{routes}</Router>
     </div>
   );
 }

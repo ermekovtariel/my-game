@@ -1,0 +1,11 @@
+export const AUTH = 'AUTH';
+export const AUTH_SUCCESS = 'AUTH_SUCCESS';
+export const AUTH_ERROR = 'AUTH_ERROR';
+export const FETCH_QUESTION = 'FETCH_QUESTION';
+export const FETCH_QUESTION_SUCCESS = 'FETCH_QUESTION_SUCCESS';
+export const FETCH_QUESTION_ERROR = 'FETCH_QUESTION_ERROR';
+export const HISTORY = 'HISTORY';
+export const SCORE_PLUS = 'SCORE_PLUS';
+export const SCORE_MINUS = 'SCORE_MINUS';
+export const SCORE_TO_ZERO = 'SCORE_TO_ZERO';
+export const CLEAR = 'CLEAR';

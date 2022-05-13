@@ -1,0 +1,33 @@
+.ant-card-bordered {
+  overflow-y: scroll;
+}
+
+.container {
+  padding: 2rem;
+  height: 80vh;
+  background: #00000008;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: auto auto;
+}
+.container_statistic {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  height: 20vh;
+  .box {
+    display: grid;
+    margin: 1rem 0;
+    float: right;
+    a {
+      height: 100%;
+      button {
+        display: grid;
+        height: 100%;
+        text-align: center;
+        width: 100%;
+        font-size: 36px;
+        align-content: center;
+      }
+    }
+  }
+}
